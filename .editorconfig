@@ -1,0 +1,4 @@
+﻿[*.{cs,vb}]
+
+# IDE0049: Use framework type
+dotnet_diagnostic.IDE0049.severity = none
