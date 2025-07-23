@@ -52,6 +52,12 @@ TagManager:
   - name: Player
     uniqueID: 4004523581
     locked: 0
+  - name: Props
+    uniqueID: 3674080515
+    locked: 0
+  - name: Wall
+    uniqueID: 3046179623
+    locked: 0
   - name: UI
     uniqueID: 1275537523
     locked: 0
