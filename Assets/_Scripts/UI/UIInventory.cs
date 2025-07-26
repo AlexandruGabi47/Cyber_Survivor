@@ -1,6 +1,7 @@
 using UnityEngine;
 using CAUnityFramework;
 using System;
+using UnityEditor;
 
 public class UIInventory : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class UIInventory : MonoBehaviour
 
     private GameObject[,] inventorySlots;
 
-    void Awake()
+	void Awake()
 	{
 		this.GenerateInventoryGrid();
 	}

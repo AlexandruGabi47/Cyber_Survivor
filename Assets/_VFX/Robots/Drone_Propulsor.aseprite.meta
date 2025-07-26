@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1c2c9e874320fd343b57c1cc599bcbcc
+guid: 403dd47c1ce547f4f980132f11b17018
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
-    fileImportMode: 0
+    fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -85,7 +85,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   asepriteImporterSettings:
-    fileImportMode: 0
+    fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638880575203428977
+  platformSettingsDirtyTick: 638890952389241721
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,18 +123,81 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Human_Body
+  - name: Frame_1
     originalName: 
-    pivot: {x: 9.111112, y: -7.2419353}
+    pivot: {x: 0.5, y: 1.2777778}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 27
-      height: 62
+      x: 0
+      y: 18
+      width: 16
+      height: 18
+    spriteID: 3ef74d0806f447f49b493a5f88e74930
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 18}
+  - name: Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 1.2777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 36
+      width: 16
+      height: 18
+    spriteID: de94494578ba3c7498cea2f74a2f9b73
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 36}
+  - name: Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 1.2777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 0
+      width: 16
+      height: 18
+    spriteID: bb18d96d10e21cd4a8c9facf14469565
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 16, y: 0}
+  - name: Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: 1.2777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 16
+      height: 18
     spriteID: 76beb15be57ebb346a8a6a871ff22b49
     spriteBone: []
     spriteOutline: []
@@ -143,50 +206,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
-  spriteSheetImportData:
-  - name: Enemy_Basic
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 33
-      height: 42
-    spriteID: 6f75d6ac52ac5a740a97ee931c73f096
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Enemy_Gun
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 33
-      y: 16
-      width: 28
-      height: 12
-    spriteID: 995a33ef4a6b084459645eab5b979aed
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
+  spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
     guid: 159138813
@@ -195,15 +216,42 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Enemy_Basic
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 22
-        width: 61
-        height: 42
+        y: 18
+        width: 16
+        height: 18
       spriteId: 76beb15be57ebb346a8a6a871ff22b49
+    - name: Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 18
+        width: 16
+        height: 18
+      spriteId: 3ef74d0806f447f49b493a5f88e74930
+    - name: Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 18
+        width: 16
+        height: 18
+      spriteId: de94494578ba3c7498cea2f74a2f9b73
+    - name: Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 18
+        width: 16
+        height: 18
+      spriteId: bb18d96d10e21cd4a8c9facf14469565
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -247,4 +295,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
-  previousTextureSize: {x: 64, y: 64}
+  previousTextureSize: {x: 32, y: 64}
