@@ -148,15 +148,15 @@ ScriptedImporter:
   - name: UI_Crosshair
     originalName: 
     pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 52
-      y: 20
-      width: 7
-      height: 7
+      x: 4
+      y: 19
+      width: 16
+      height: 16
     spriteID: 40fe4b0d70962d6428c028c02a3032e5
     spriteBone: []
     spriteOutline: []
@@ -166,16 +166,16 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: UI_Cursor
+  - name: UI_Cursor_Arrow
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0, y: 1}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 36
-      y: 18
+      x: 4
+      y: 58
       width: 9
       height: 9
     spriteID: 191d2bcc1911ca743b2ee17d9c3e0274
@@ -187,18 +187,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: UI_Rectangle_0
+  - name: UI_Rectangle_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 53
-      y: 4
-      width: 7
-      height: 7
+      x: 44
+      y: 7
+      width: 8
+      height: 8
     spriteID: ccec13a1525172a4ea46e9254e23579b
     spriteBone: []
     spriteOutline: []
@@ -208,18 +208,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: UI_Rectangle_1
+  - name: UI_Rectangle_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 62
-      y: 5
-      width: 5
-      height: 5
+      x: 53
+      y: 8
+      width: 6
+      height: 6
     spriteID: ef4827504ac0a58408659b01610d3283
     spriteBone: []
     spriteOutline: []
@@ -229,7 +229,49 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: UI_Crosshair_X
+  - name: UI_Cursors_Finger
+    originalName: 
+    pivot: {x: 0.30769232, y: 0.86666673}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 20
+      y: 52
+      width: 13
+      height: 15
+    spriteID: b1982de938b537b4399e4ccabadd69ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_Cursors_Finger_Select
+    originalName: 
+    pivot: {x: 0.30769232, y: 0.86666673}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 52
+      width: 13
+      height: 15
+    spriteID: abe1c274f36b6b0439fca07b199fc826
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_Rectangle_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -237,11 +279,179 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 59
-      y: 12
-      width: 9
-      height: 7
-    spriteID: e8f04640c8a19b9429bc6b7ae63e24ea
+      x: 33
+      y: 6
+      width: 10
+      height: 10
+    spriteID: d40581e124d67a6468785d70f9983f71
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_Rectangle_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 20
+      y: 5
+      width: 12
+      height: 12
+    spriteID: b11a8c26578163b47a0caefcef9a3c19
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_Rectangle_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 5
+      y: 4
+      width: 14
+      height: 14
+    spriteID: 12520a4c75d20d94fbc15a26e19d1ce0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_Cursor_Unavailable
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 20
+      y: 19
+      width: 16
+      height: 16
+    spriteID: 5a3313951a30f6140a26ccf50264910c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_TextSelect
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 51
+      width: 6
+      height: 16
+    spriteID: 342003e2ef804344d85dfd806368639d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_VerticalResize
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 35
+      width: 16
+      height: 16
+    spriteID: f95cb1d0d6466ce4a881999ce06c3d52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_HorizontalResize
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 20
+      y: 35
+      width: 16
+      height: 16
+    spriteID: bdfb024bafc02f74ba1107f321c106aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_DiagonalResizeTR_BL
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 35
+      width: 16
+      height: 16
+    spriteID: ad096aa516b1f084a8def10d974bd5d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_DiagonalResizeTL_BR
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 35
+      width: 16
+      height: 16
+    spriteID: dac7b780e7bb87a4ea2dae0e8226f4d9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -263,9 +473,9 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 41
-        width: 64
-        height: 23
+        y: 1
+        width: 62
+        height: 63
       spriteId: 76beb15be57ebb346a8a6a871ff22b49
     linkedCells: []
     parentIndex: -1
@@ -310,4 +520,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
-  previousTextureSize: {x: 128, y: 32}
+  previousTextureSize: {x: 128, y: 128}

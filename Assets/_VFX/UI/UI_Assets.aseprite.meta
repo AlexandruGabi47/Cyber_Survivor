@@ -154,7 +154,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 80
       width: 48
       height: 48
     spriteID: 26b4426b3dad6944e9b0f183e5b246a4
@@ -175,7 +175,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 48
-      y: 125
+      y: 205
       width: 16
       height: 3
     spriteID: 0bb23a583d59a244ba8b61bfdb5d6567
@@ -191,15 +191,120 @@ ScriptedImporter:
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
-    border: {x: 3, y: 3, z: 3, w: 3}
+    border: {x: 5, y: 5, z: 5, w: 5}
     customData: 
     rect:
       serializedVersion: 2
-      x: 80
-      y: 0
+      x: 0
+      y: 64
       width: 16
       height: 16
     spriteID: 753f926d0477fc4468390c843519021f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_Assets_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 5, y: 5, z: 5, w: 5}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 2bbc5820c293d404bb518e89f019e48a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_Cancel
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 32
+      height: 32
+    spriteID: cac8fc6002ffa3140a632a3e89c23477
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_Accept
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 5ae1e29d0359fea4fb311de3b2512a4e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_ArrowLeft
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 0
+      width: 22
+      height: 32
+    spriteID: c243fb6f75a02894199e149a310c851c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI_Cog
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 05e1920c9ce9cd5418f73bb4223e346e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -221,9 +326,9 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 0
-        width: 96
-        height: 128
+        y: 48
+        width: 160
+        height: 208
       spriteId: 76beb15be57ebb346a8a6a871ff22b49
     linkedCells: []
     parentIndex: -1
@@ -267,5 +372,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 128, y: 128}
-  previousTextureSize: {x: 128, y: 128}
+  canvasSize: {x: 256, y: 256}
+  previousTextureSize: {x: 256, y: 256}

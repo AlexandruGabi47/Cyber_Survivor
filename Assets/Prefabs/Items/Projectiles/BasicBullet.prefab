@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 1516889364961641984}
   - component: {fileID: 7962707672107735270}
   - component: {fileID: 8546832610323321800}
+  - component: {fileID: 4058113952588014733}
   - component: {fileID: 3479044746283260785}
   - component: {fileID: 131594477731587302}
   - component: {fileID: -3104976169433746018}
   - component: {fileID: 1599692804821069516}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BasicBullet
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 8952163701789425537}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.951, y: -0.205, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -106,10 +107,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 320
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -162,10 +163,22 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &4058113952588014733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8952163701789425537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5aa7acecc3b2f04db584361faa9c0c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3479044746283260785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,8 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f32cda58901045e4b994ccc71495f6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageData:
-    Damage: 10
   OnHit:
     m_PersistentCalls:
       m_Calls:
@@ -234,6 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09eaf9cc17e94df4cb110a779ab5cd0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tiedObjects: []
+  timerUntilDespawn: 1
 --- !u!96 &1599692804821069516
 TrailRenderer:
   serializedVersion: 3

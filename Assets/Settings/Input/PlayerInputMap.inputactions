@@ -33,22 +33,13 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "CrouchToggle",
+                    "name": "Crouch",
                     "type": "Button",
                     "id": "d8ca8d22-2965-4e5d-9d57-e54a292d0237",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "New action",
-                    "type": "Value",
-                    "id": "922bcc29-9812-492d-948a-f7feb4c87952",
-                    "expectedControlType": "Analog",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 },
                 {
                     "name": "Use",
@@ -72,6 +63,15 @@
                     "name": "Interact",
                     "type": "Button",
                     "id": "fab1b202-1b22-4186-94ca-5b4e5fae9f73",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Reload",
+                    "type": "Button",
+                    "id": "25a3ac7d-f27f-4f92-9e81-8612057f2abc",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -108,18 +108,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "CrouchToggle",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "cc1d20a0-e605-428f-ac23-bfc6a4f5e77b",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Player",
-                    "action": "New action",
+                    "action": "Crouch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -210,6 +199,105 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "86aaebaf-a4f6-45d8-8789-0f7af09294dc",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "17e87bc8-1676-4b5b-a054-039b8656a8db",
+            "actions": [
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "09b05d2d-c242-47c4-bb34-b356edffc445",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Inventory",
+                    "type": "Button",
+                    "id": "1738d7fd-6634-43b8-bdb7-ad7bb17f9a07",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "NextToolbarItem",
+                    "type": "Value",
+                    "id": "9433ae76-822e-4708-8a0f-12abb52af33f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "PreviousToolbarItem",
+                    "type": "Value",
+                    "id": "3016c090-8e33-4f05-b384-6dce4d7e787e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f9c0a2cb-d1b4-43c9-a63a-527c0ce66201",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "98a4fa24-3829-4092-80e3-405f6bf79a9b",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fe2cc9b6-5113-4167-8e6c-d5d0f094c0b1",
+                    "path": "<Mouse>/scroll/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextToolbarItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "02d47faa-010c-4b73-bb81-f74680e5e9bf",
+                    "path": "<Mouse>/scroll/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PreviousToolbarItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638880575203428977
+  platformSettingsDirtyTick: 638880573577684276
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -145,10 +145,10 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: Drone
+  - name: Drone_Body
     originalName: 
     pivot: {x: 0.5, y: 0.5}
-    alignment: 9
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -157,7 +157,7 @@ ScriptedImporter:
       y: 0
       width: 16
       height: 16
-    spriteID: 6f75d6ac52ac5a740a97ee931c73f096
+    spriteID: 82a89110115016b40bc147abd1fa9c6f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -169,7 +169,7 @@ ScriptedImporter:
   - name: Drone_Eye
     originalName: 
     pivot: {x: 0.5, y: 0.5}
-    alignment: 9
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -178,7 +178,7 @@ ScriptedImporter:
       y: 0
       width: 16
       height: 16
-    spriteID: 66d7fde68e300f34998c28c5fc7a02b5
+    spriteID: 44c389802bc74ae43816f007eb882b1b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +190,7 @@ ScriptedImporter:
   - name: Drone_Armor
     originalName: 
     pivot: {x: 0.5, y: 0.5}
-    alignment: 9
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -199,7 +199,7 @@ ScriptedImporter:
       y: 0
       width: 16
       height: 16
-    spriteID: 9ce1a76574f42aa4693d7b5fc979e5ec
+    spriteID: 3c5f27eab692f5e4a8bbd6c62b6cb993
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -221,8 +221,8 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 49
-        width: 47
+        y: 33
+        width: 48
         height: 14
       spriteId: 76beb15be57ebb346a8a6a871ff22b49
     linkedCells: []
@@ -265,7 +265,11 @@ ScriptedImporter:
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
-  secondarySpriteTextures: []
+  secondarySpriteTextures:
+  - name: _NormalMap
+    texture: {fileID: -8328923581568760697, guid: 0ee4fb669858c1d4080d51649eced7cb, type: 3}
+  - name: _EmissionMap
+    texture: {fileID: -8328923581568760697, guid: cd1dca5668bd3524ba710155ef2f2bd4, type: 3}
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
   previousTextureSize: {x: 64, y: 16}
