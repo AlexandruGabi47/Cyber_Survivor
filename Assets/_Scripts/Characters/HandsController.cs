@@ -10,7 +10,7 @@ public class HandsController : MonoBehaviour
 
 	public void Start()
 	{
-		this.weapon = this.GetComponentInChildren<PistolController>();
+		this.weapon = this.GetComponentInChildren<Weapon2D>();
 	}
 
 	private void OnEnable()

@@ -14,15 +14,13 @@ public class Targeting2DBehaviour : MonoBehaviour
 	[Tooltip("The speed the object should rotate towards the target")]
 	[SerializeField] private float rotationSpeed = 10f;
 
-	private Rigidbody2D targetRb;
-
 	void Start()
 	{
 		if (this.trackedObject == null)
 			this.trackedObject = this.transform.parent;
 	}
 
-	void LateUpdate()
+	void FixedUpdate()
 	{
 		if (PauseManager.IsPaused())
 			return;
@@ -50,13 +48,10 @@ public class Targeting2DBehaviour : MonoBehaviour
 
 		if (direction.sqrMagnitude > 0.0001f)
 		{
-			// Target rotation: make .up face the direction
 			Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, direction);
 
-			// Lerp rotation
 			this.transform.rotation = Quaternion.Lerp(this.transform.rotation, targetRotation, Time.deltaTime * this.rotationSpeed);
 
-			// Lock X and Y rotation (Z only)
 			Vector3 euler = this.transform.rotation.eulerAngles;
 			this.transform.rotation = Quaternion.Euler(0f, 0f, euler.z);
 		}

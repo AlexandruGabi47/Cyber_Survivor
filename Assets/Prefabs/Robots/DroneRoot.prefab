@@ -185,6 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1556331111645981130}
   - component: {fileID: 6543308092578099189}
+  - component: {fileID: 232908610909416191}
   m_Layer: 0
   m_Name: Laser_Gun
   m_TagString: Untagged
@@ -262,6 +263,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &232908610909416191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622773661407702170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98704b226d993524abd797bef2f97b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 5
+  FireRate: 0.1
+  ExitSpeed: 20
+  Range: 100
+  MagazineCapacity: 30
+  ReloadTime: 1
+  bulletPrefab: {fileID: 8952163701789425537, guid: 2eb9f13e34806d84eb7ca8faeb243eae, type: 3}
+  bulletPoolDefaultSize: 50
+  _muzzleFlash: {fileID: 0}
+  _flashDuration: 0.1
 --- !u!1 &1070864196331750200
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +418,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 1, g: 0.52156866, b: 0, a: 1}
-  m_Intensity: 100
+  m_Intensity: 20
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 77e67dfcab05b0a00305feda3d2eb0ee
@@ -419,7 +442,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 180
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 0.78
+  m_PointLightOuterRadius: 1.25
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -564,17 +587,17 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 0000000077e67dfcab05b0a03d2eb0ee0305feda270391b57328074c
+  m_ApplyToSortingLayers: 0000000077e67dfcab05b0a03d2eb0ee0305feda270391b5
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
-  m_NormalMapDistance: 3
+  m_NormalMapDistance: 1
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
-  m_ShadowIntensity: 0.75
+  m_ShadowIntensity: 1
   m_ShadowSoftness: 0.3
   m_ShadowSoftnessFalloffIntensity: 0.5
   m_ShadowVolumeIntensityEnabled: 0
@@ -889,7 +912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df568a2e4f1138c4fac483a855fb0a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 100
+  max: 20
   OnEmpty:
     m_PersistentCalls:
       m_Calls:
@@ -961,7 +984,7 @@ GameObject:
   - component: {fileID: 283502567085436912}
   - component: {fileID: 4210690301430301042}
   m_Layer: 0
-  m_Name: GunPivot
+  m_Name: HardPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

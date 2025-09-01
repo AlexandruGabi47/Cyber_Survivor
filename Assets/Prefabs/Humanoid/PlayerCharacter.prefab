@@ -848,7 +848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiedObjects: []
-  timer: 0
+  timerUntilDespawn: 0
 --- !u!1 &8051372414686013969
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,7 +1031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4988767311519087576}
   - component: {fileID: 1680255274576192428}
-  - component: {fileID: 972628360746545179}
+  - component: {fileID: 4574113239326540143}
   m_Layer: 0
   m_Name: PistolGun
   m_TagString: Untagged
@@ -1112,7 +1112,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &972628360746545179
+--- !u!114 &4574113239326540143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1121,13 +1121,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8820411563624405521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3fb30a4ede8ff940bf7583509b3dd68, type: 3}
+  m_Script: {fileID: 11500000, guid: 98704b226d993524abd797bef2f97b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 5
   FireRate: 0.5
   ExitSpeed: 50
-  Range: 200
+  Range: 100
   MagazineCapacity: 30
   ReloadTime: 1
   bulletPrefab: {fileID: 8952163701789425537, guid: fa0fa224be0d5bc45a1e9ef9599f9d45, type: 3}
