@@ -1,0 +1,87 @@
+using System;
+using UnityEngine;
+using CAUnityFramework;
+using UnityEngine.InputSystem;
+
+public partial class PlayerInventory : MonoBehaviour
+{
+	public void OnEnable()
+	{
+		this.useItem.action.performed += this.GetUseItemAction();
+		this.useItem.action.Enable();
+
+		this.dropItem.action.performed += this.GetDropItemAction();
+		this.dropItem.action.Enable();
+
+		this.hotbarScroll.action.performed += this.GetHotbarScrollAction();
+		this.hotbarScroll.action.Enable();
+	}
+
+	public void OnDisable()
+	{
+		this.useItem.action.performed -= this.GetUseItemAction();
+		this.useItem.action.Disable();
+
+		this.dropItem.action.performed -= this.GetDropItemAction();
+		this.dropItem.action.Disable();
+
+		this.hotbarScroll.action.performed -= this.GetHotbarScrollAction();
+		this.hotbarScroll.action.Disable();
+	}
+
+	private Action<InputAction.CallbackContext> GetUseItemAction() =>
+		ctx => this.UseItem();
+
+	private Action<InputAction.CallbackContext> GetDropItemAction() =>
+		ctx => this.DropItem();
+
+	private Action<InputAction.CallbackContext> GetHotbarScrollAction() =>
+		ctx => this.ScrollInventory(ctx.ReadValue<Vector2>());
+
+	private void UseItem()
+	{
+		if (this.mainInventory.Items.Count > 0)
+		{
+			//this.mainInventory.Items[this.SelectedInventoryIndex].Use();
+		}
+	}
+
+	private void DropItem()
+	{
+		if (this.mainInventory.Items.Count > 0)
+		{
+			ItemInstance itemToDrop = this.mainInventory.Items[this.currentItemIndex];
+			if (this.mainInventory.TakeItem(itemToDrop))
+			{
+				if (this.currentItemIndex >= this.mainInventory.Items.Count)
+					this.currentItemIndex = this.mainInventory.Items.Count - 1;
+
+				ItemPickup2D pickup = Instantiate(this.prefabItemPickup, this.pickupParent.transform);
+				pickup.transform.position = this.transform.position;
+				pickup.SetItemInstance(itemToDrop);
+			}
+		}
+	}
+
+	private void ScrollInventory(Vector2 scrollValue)
+	{
+		if (scrollValue.y > 0f)
+		{
+			this.currentItemIndex--;
+			if (this.currentItemIndex < 0)
+			{
+				this.currentItemIndex = this.mainInventory.Items.Count - 1;
+			}
+			this.inventoryUI.ShowSelectedSlot(this.currentItemIndex);
+		}
+		else if (scrollValue.y < 0f)
+		{
+			this.currentItemIndex++;
+			if (this.currentItemIndex >= this.mainInventory.Items.Count)
+			{
+				this.currentItemIndex = 0;
+			}
+			this.inventoryUI.ShowSelectedSlot(this.currentItemIndex);
+		}
+	}
+}

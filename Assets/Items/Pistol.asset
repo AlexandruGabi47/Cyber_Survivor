@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4a89d2ccfe914cbfca61148943c59, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: 
+  displayName: Pistol
+  id: Pistol
+  icon: {fileID: -4136130880062492013, guid: 6a316700bccdaf54b89beff0b849b47b, type: 3}
+  maxQuantity: 1
+  shape:
+    width: 1
+    height: 1
+    cells: 01
+  properties:
+  - tag: Weapon2DPB
+    parameters:
+    - name: Damage
+      type: 5
+      value: 5
+      description: 
+    - name: FireRate
+      type: 5
+      value: 0.1
+      description: 
+    - name: ExitSpeed
+      type: 5
+      value: 20
+      description: 
+    - name: Range
+      type: 5
+      value: 100
+      description: 
+    - name: MagazineCapacity
+      type: 3
+      value: 30
+      description: 
+    - name: ReloadTime
+      type: 5
+      value: 1
+      description: 
+    - name: bulletPoolDefaultSize
+      type: 3
+      value: 50
+      description: 
+    - name: flashDuration
+      type: 5
+      value: 0.1
+      description: 

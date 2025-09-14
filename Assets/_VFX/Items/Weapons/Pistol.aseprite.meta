@@ -147,7 +147,7 @@ ScriptedImporter:
   spriteSheetImportData:
   - name: Pistol
     originalName: 
-    pivot: {x: 0.11111111, y: 0.8000001}
+    pivot: {x: 0.6, y: 0.8888889}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -155,8 +155,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 9
-      height: 15
+      width: 15
+      height: 9
     spriteID: 9a227e3d67966f04683afe51096089d5
     spriteBone: []
     spriteOutline: []
@@ -174,10 +174,10 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 0
-      y: 15
-      width: 5
-      height: 7
+      x: 19
+      y: 3
+      width: 7
+      height: 5
     spriteID: b102af1c6edfc3642b275537105db136
     spriteBone: []
     spriteOutline: []
@@ -199,10 +199,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 9
-        height: 22
+        x: 1
+        y: 19
+        width: 26
+        height: 9
       spriteId: 76b7c3d542553f64a89cf6c1fe25eee0
     linkedCells: []
     parentIndex: -1
@@ -247,4 +247,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 32}
-  previousTextureSize: {x: 16, y: 32}
+  previousTextureSize: {x: 32, y: 16}
