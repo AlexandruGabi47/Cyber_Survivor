@@ -27,7 +27,7 @@ public class UIListInventoryMB : UIBaseInventory
 			itemGO.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -this.itemHeight * index);
 
 			var itemHandler = itemGO.GetComponent<ListInventoryItemHandler>();
-			itemHandler.SetItem(inventory.Items[index]);
+			itemHandler.UpdateDisplay(inventory.Items[index]);
 			this.itemHandlers.Add(itemHandler);
 		}
 	}
@@ -38,17 +38,12 @@ public class UIListInventoryMB : UIBaseInventory
 		{
 			if (index < inventory.Items.Count)
 			{
-				if (this.itemHandlers[index].Item == inventory.Items[index])
-				{
-					this.itemHandlers[index].UpdateDisplay();
-					continue;
-				}
-
-				this.itemHandlers[index].SetItem(inventory.Items[index]);
+				this.itemHandlers[index].UpdateDisplay(inventory.Items[index]);
 				this.itemHandlers[index].gameObject.SetActive(true);
 			}
 			else
 			{
+				this.itemHandlers[index].UpdateDisplay(null);
 				this.itemHandlers[index].gameObject.SetActive(false);
 			}
 		}

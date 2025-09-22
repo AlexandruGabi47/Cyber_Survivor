@@ -10,28 +10,24 @@ public class ListInventoryItemHandler : MonoBehaviour
 
 	[SerializeField] private GameObject selectedObject;
 
-	public ItemInstance Item { get; private set; }
-
-	public void SetItem(ItemInstance item)
-	{
-		this.Item = item;
-
-		if (this.itemName == null)
-			return;
-
-		this.UpdateDisplay();
-	}
-
 	public void SetSelected(bool selected)
 	{
 		if (this.selectedObject != null)
 			this.selectedObject.SetActive(selected);
 	}
 
-	public void UpdateDisplay()
+	public void UpdateDisplay(ItemInstance item)
 	{
-		this.itemName.text = $"{this.Item.GetDisplayName()} - x{this.Item.Quantity}";
-		this.itemIcon.sprite = this.Item.GetIcon();
+		if (item == null)
+		{
+			this.itemName.text = "Empty";
+			this.itemIcon.sprite = null;
+		}
+		else
+		{
+			this.itemName.text = $"{item.GetDisplayName()} - x{item.Quantity}";
+			this.itemIcon.sprite = item.GetIcon();
+		}
 		this.UpdateTextWidthToFit();
 		this.ResizeSelectedOverlayToText();
 	}

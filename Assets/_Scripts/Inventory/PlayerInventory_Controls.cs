@@ -54,8 +54,9 @@ public partial class PlayerInventory : MonoBehaviour
 			if (this.mainInventory.TakeItem(itemToDrop))
 			{
 				if (this.currentItemIndex >= this.mainInventory.Items.Count)
-					this.currentItemIndex = this.mainInventory.Items.Count - 1;
+					this.currentItemIndex = Math.Max(0, this.mainInventory.Items.Count - 1);
 
+				this.inventoryUI.ShowSelectedSlot(this.currentItemIndex);
 				ItemPickup2D pickup = Instantiate(this.prefabItemPickup, this.pickupParent.transform);
 				pickup.transform.position = this.transform.position;
 				pickup.SetItemInstance(itemToDrop);
@@ -63,25 +64,33 @@ public partial class PlayerInventory : MonoBehaviour
 		}
 	}
 
+
+
 	private void ScrollInventory(Vector2 scrollValue)
 	{
 		if (scrollValue.y > 0f)
-		{
-			this.currentItemIndex--;
-			if (this.currentItemIndex < 0)
-			{
-				this.currentItemIndex = this.mainInventory.Items.Count - 1;
-			}
-			this.inventoryUI.ShowSelectedSlot(this.currentItemIndex);
-		}
+			this.ScrollUp();
 		else if (scrollValue.y < 0f)
+			this.ScrollDown();
+	}
+
+	private void ScrollUp()
+	{
+		this.currentItemIndex--;
+		if (this.currentItemIndex < 0)
 		{
-			this.currentItemIndex++;
-			if (this.currentItemIndex >= this.mainInventory.Items.Count)
-			{
-				this.currentItemIndex = 0;
-			}
-			this.inventoryUI.ShowSelectedSlot(this.currentItemIndex);
+			this.currentItemIndex = this.mainInventory.Items.Count - 1;
 		}
+		this.inventoryUI.ShowSelectedSlot(this.currentItemIndex);
+	}
+
+	private void ScrollDown()
+	{
+		this.currentItemIndex++;
+		if (this.currentItemIndex >= this.mainInventory.Items.Count)
+		{
+			this.currentItemIndex = 0;
+		}
+		this.inventoryUI.ShowSelectedSlot(this.currentItemIndex);
 	}
 }

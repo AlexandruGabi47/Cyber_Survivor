@@ -26,7 +26,6 @@ public partial class PlayerInventory : MonoBehaviour
 
 	private void UpdateInventoryUI()
 	{
-		Debug.Log("Inventory updated");
 		this.inventoryUI.UpdateInventory(this.mainInventory);
 		this.inventoryUI.ShowSelectedSlot(this.currentItemIndex);
 	}
@@ -48,6 +47,5 @@ public partial class PlayerInventory : MonoBehaviour
 		this.mainInventory.TryAddItem(itemIns, out ItemInstance remainingItems);
 		itemPickup.SetItemInstance(remainingItems);
 		itemPickup.PickupDone();
-		Debug.Log($"Picked up item: {itemIns.ItemData.ID} x{itemIns.Quantity}");
 	}
 }
