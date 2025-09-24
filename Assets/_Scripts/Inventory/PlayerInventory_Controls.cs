@@ -64,8 +64,6 @@ public partial class PlayerInventory : MonoBehaviour
 		}
 	}
 
-
-
 	private void ScrollInventory(Vector2 scrollValue)
 	{
 		if (scrollValue.y > 0f)

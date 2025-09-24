@@ -32,7 +32,6 @@ public class Targeting2DBehaviour : MonoBehaviour
 		else
 			this.LerpFaceTowardsTarget(target);
 
-
 		if (this.flipXOn180)
 		{
 			if (this.transform.eulerAngles.z <= 180)
