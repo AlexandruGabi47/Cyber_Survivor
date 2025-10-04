@@ -345,6 +345,14 @@ Preset:
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
+    propertyPath: m_PreviousAsepriteImporterSettings.m_GenerateIndividualEvents
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PreviousAsepriteImporterSettings.m_GenerateSpriteAtlas
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
     propertyPath: m_AsepriteImporterSettings.m_FileImportMode
     value: 0
     objectReference: {fileID: 0}
@@ -374,7 +382,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_AsepriteImporterSettings.m_MosaicPadding
-    value: 0
+    value: 16
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_AsepriteImporterSettings.m_SpritePadding
@@ -397,12 +405,20 @@ Preset:
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
+    propertyPath: m_AsepriteImporterSettings.m_GenerateIndividualEvents
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_AsepriteImporterSettings.m_GenerateSpriteAtlas
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
     propertyPath: m_ImportFileNodeState
     value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_PlatformSettingsDirtyTick
-    value: 638880573577684276
+    value: 638949582666039896
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_TextureAssetName
@@ -510,106 +526,14 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_AnimatedSpriteImportData.Array.size
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_Name
-    value: Human_Body
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_OriginalName
-    value: 
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_Pivot.x
-    value: 9.111112
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_Pivot.y
-    value: -7.2419353
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_Alignment
-    value: 9
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_Border.x
     value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_Border.y
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_Border.z
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_Border.w
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_CustomData
-    value: 
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_Rect.x
-    value: 4
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_Rect.y
-    value: 4
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_Rect.width
-    value: 27
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_Rect.height
-    value: 62
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].m_SpriteID
-    value: 76beb15be57ebb346a8a6a871ff22b49
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].spriteBone.Array.size
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].spriteOutline.Array.size
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].vertices.Array.size
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].spritePhysicsOutline.Array.size
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].indices.Array.size
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].edges.Array.size
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].tessellationDetail
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].uvTransform.x
-    value: 4
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_AnimatedSpriteImportData.Array.data[0].uvTransform.y
-    value: 4
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheetImportData.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_TileSetImportData.Array.size
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
@@ -618,6 +542,22 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_AsepriteLayers.Array.data[0].m_LayerIndex
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_AsepriteLayers.Array.data[0].m_Uuid.m_Value0
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_AsepriteLayers.Array.data[0].m_Uuid.m_Value1
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_AsepriteLayers.Array.data[0].m_Uuid.m_Value2
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_AsepriteLayers.Array.data[0].m_Uuid.m_Value3
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
@@ -681,12 +621,24 @@ Preset:
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
+    propertyPath: m_AsepriteLayers.Array.data[0].m_TileCells.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_AsepriteLayers.Array.data[0].m_TileSetIndex
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
     propertyPath: m_AsepriteLayers.Array.data[0].m_ParentIndex
     value: -1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
+    propertyPath: m_TileSets.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
     propertyPath: m_PlatformSettings.Array.size
-    value: 3
+    value: 4
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_PlatformSettings.Array.data[0].m_Name
@@ -830,6 +782,54 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_PlatformSettings.Array.data[2].m_AndroidETC2FallbackOverride
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PlatformSettings.Array.data[3].m_Name
+    value: WebGL
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PlatformSettings.Array.data[3].m_Overridden
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PlatformSettings.Array.data[3].m_IgnorePlatformSupport
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PlatformSettings.Array.data[3].m_MaxTextureSize
+    value: 16384
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PlatformSettings.Array.data[3].m_ResizeAlgorithm
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PlatformSettings.Array.data[3].m_TextureFormat
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PlatformSettings.Array.data[3].m_TextureCompression
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PlatformSettings.Array.data[3].m_CompressionQuality
+    value: 50
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PlatformSettings.Array.data[3].m_ForceMaximumCompressionQuality_BC6H_BC7
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PlatformSettings.Array.data[3].m_CrunchedCompression
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PlatformSettings.Array.data[3].m_AllowsAlphaSplitting
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PlatformSettings.Array.data[3].m_AndroidETC2FallbackOverride
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}

@@ -16,8 +16,8 @@ MonoBehaviour:
   id: Health_Pack
   icon: {fileID: -1411764494596310965, guid: 08b69a797726fe541adbef98efbc0094, type: 3}
   maxQuantity: 8
+  properties: []
   shape:
     width: 1
     height: 1
     cells: 01
-  properties: []

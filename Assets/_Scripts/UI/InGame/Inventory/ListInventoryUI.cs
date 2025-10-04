@@ -16,22 +16,6 @@ public class UIListInventoryMB : UIBaseInventory
 		this.AddItemHandlersForNewItems(inventory);
 	}
 
-	private void AddItemHandlersForNewItems(BaseInventory inventory)
-	{
-		for (int index = 0; index < inventory.Items.Count; index++)
-		{
-			if (index < this.itemHandlers.Count)
-				continue;
-
-			var itemGO = Instantiate(this.itemDisplayPrefab, this.transform);
-			itemGO.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -this.itemHeight * index);
-
-			var itemHandler = itemGO.GetComponent<ListInventoryItemHandler>();
-			itemHandler.UpdateDisplay(inventory.Items[index]);
-			this.itemHandlers.Add(itemHandler);
-		}
-	}
-
 	private void UpdateItemHandlersDisplay(BaseInventory inventory)
 	{
 		for (int index = 0; index < this.itemHandlers.Count; index++)
@@ -46,6 +30,22 @@ public class UIListInventoryMB : UIBaseInventory
 				this.itemHandlers[index].UpdateDisplay(null);
 				this.itemHandlers[index].gameObject.SetActive(false);
 			}
+		}
+	}
+
+	private void AddItemHandlersForNewItems(BaseInventory inventory)
+	{
+		for (int index = 0; index < inventory.Items.Count; index++)
+		{
+			if (index < this.itemHandlers.Count)
+				continue;
+
+			var itemGO = Instantiate(this.itemDisplayPrefab, this.transform);
+			itemGO.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -this.itemHeight * index);
+
+			var itemHandler = itemGO.GetComponent<ListInventoryItemHandler>();
+			itemHandler.UpdateDisplay(inventory.Items[index]);
+			this.itemHandlers.Add(itemHandler);
 		}
 	}
 

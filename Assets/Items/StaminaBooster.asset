@@ -16,8 +16,10 @@ MonoBehaviour:
   id: Inhaler_Stamina
   icon: {fileID: 6422974335192418320, guid: 08b69a797726fe541adbef98efbc0094, type: 3}
   maxQuantity: 32
+  properties:
+  - tag: 
+    parameters: []
   shape:
-    width: 4
-    height: 3
-    cells: 010000010001010000000100
-  properties: []
+    width: 1
+    height: 1
+    cells: 01

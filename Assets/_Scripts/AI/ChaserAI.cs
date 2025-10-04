@@ -13,13 +13,16 @@ public class ChaserAI : MonoBehaviour
 		this.navMeshAgent = this.GetComponent<NavMeshAgent>();
 	}
 
-	private void Start()
-	{
-		
-	}
-
 	void Update()
     {
-        this.navMeshAgent.SetDestination(this.player.position);
-    }
+		if (this.player != null)
+			this.navMeshAgent.SetDestination(this.player.position);
+		else
+			this.navMeshAgent.SetDestination(this.transform.position);
+	}
+
+	public void SetTarget(Transform playerTransform = null)
+	{
+		this.player = playerTransform;
+	}
 }

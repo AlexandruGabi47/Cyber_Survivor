@@ -56,7 +56,7 @@ public class ListInventoryItemHandler : MonoBehaviour
 			RectTransform overlayRect = this.selectedObject.GetComponent<RectTransform>();
 
 			// Optionally add some padding
-			float paddingX = 16f;
+			float paddingX = 26f;
 			float paddingY = 8f;
 
 			overlayRect.sizeDelta = new Vector2(

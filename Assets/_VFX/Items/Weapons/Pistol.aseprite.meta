@@ -8,7 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
-  importerVersion: 1
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -78,12 +78,14 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
-    mosaicPadding: 0
+    mosaicPadding: 16
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 0
     importHiddenLayers: 0
@@ -91,14 +93,16 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
-    mosaicPadding: 0
+    mosaicPadding: 16
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638880574834003104
+  platformSettingsDirtyTick: 638949490213521209
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -147,16 +151,16 @@ ScriptedImporter:
   spriteSheetImportData:
   - name: Pistol
     originalName: 
-    pivot: {x: 0.6, y: 0.8888889}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 0
-      y: 0
-      width: 15
-      height: 9
+      x: 15
+      y: 13
+      width: 16
+      height: 16
     spriteID: 9a227e3d67966f04683afe51096089d5
     spriteBone: []
     spriteOutline: []
@@ -168,16 +172,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Pistol_MuzzleFlash
     originalName: 
-    pivot: {x: 0.4, y: 0.42857146}
+    pivot: {x: 0.11111111, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 19
-      y: 3
-      width: 7
-      height: 5
+      x: 34
+      y: 18
+      width: 9
+      height: 8
     spriteID: b102af1c6edfc3642b275537105db136
     spriteBone: []
     spriteOutline: []
@@ -187,8 +191,14 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
+    uuid:
+      value0: 1152171245
+      value1: 0
+      value2: 0
+      value3: 0
     guid: 1152171245
     name: Pistol
     layerFlags: 0
@@ -201,11 +211,14 @@ ScriptedImporter:
       cellRect:
         x: 1
         y: 19
-        width: 26
-        height: 9
+        width: 27
+        height: 10
       spriteId: 76b7c3d542553f64a89cf6c1fe25eee0
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -243,8 +256,20 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 32}
-  previousTextureSize: {x: 32, y: 16}
+  previousTextureSize: {x: 64, y: 64}

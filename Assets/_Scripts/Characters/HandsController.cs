@@ -6,11 +6,11 @@ public class HandsController : MonoBehaviour
 {
 	[SerializeField] private InputActionReference useAction;
 
-	private Weapon2D weapon;
+	private BasicWeapon2D weapon;
 
 	public void Start()
 	{
-		this.weapon = this.GetComponentInChildren<Weapon2D>();
+		this.weapon = this.GetComponentInChildren<BasicWeapon2D>();
 	}
 
 	private void OnEnable()
