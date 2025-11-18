@@ -10,12 +10,18 @@ public class DashBarUI : MonoBehaviour
 
 	private void OnEnable()
 	{
-		this.characterController.OnDashUpdated.AddListener(this.UpdateDashBar);
+		if (this.characterController != null)
+		{
+			this.characterController.OnDashUpdated.AddListener(this.UpdateDashBar);
+		}
 	}
 
 	private void OnDisable()
 	{
-		this.characterController.OnDashUpdated.RemoveListener(this.UpdateDashBar);
+		if (this.characterController != null)
+		{
+			this.characterController.OnDashUpdated.RemoveListener(this.UpdateDashBar);
+		} 
 	}
 
     void Start()

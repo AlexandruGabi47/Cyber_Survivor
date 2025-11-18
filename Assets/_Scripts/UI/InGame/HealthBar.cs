@@ -7,14 +7,20 @@ public abstract class HealthBar : MonoBehaviour
 
 	void OnEnable()
 	{
-		this.health.OnMaxUpdate += this.UpdateMaxHealth;
-		this.health.OnValueUpdate += this.UpdateCurrentHealth;
+		if (this.health != null)
+		{
+			this.health.OnMaxUpdate += this.UpdateMaxHealth;
+			this.health.OnValueUpdate += this.UpdateCurrentHealth;
+		}
 	}
 
 	void OnDisable()
 	{
-		this.health.OnMaxUpdate -= this.UpdateMaxHealth;
-		this.health.OnValueUpdate -= this.UpdateCurrentHealth;
+		if (this.health != null)
+		{
+			this.health.OnMaxUpdate -= this.UpdateMaxHealth;
+			this.health.OnValueUpdate -= this.UpdateCurrentHealth;
+		}
 	}
 
 	void Start()

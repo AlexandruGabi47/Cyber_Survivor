@@ -17,6 +17,10 @@ public partial class PlayerInventory : MonoBehaviour
 	[SerializeField] private GameObject pickupParent;
 	[SerializeField] private ItemPickup2D prefabItemPickup;
 
+	[Header("Hands")]
+	[SerializeField] private Transform rightHand;
+	[SerializeField] private Transform leftHand;
+
 	private int currentItemIndex = 0;
 
 	void Start()

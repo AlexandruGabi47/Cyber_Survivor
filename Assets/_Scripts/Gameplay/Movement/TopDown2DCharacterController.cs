@@ -42,6 +42,7 @@ public class TopDown2DCharacterController : MonoBehaviour
 
 	public UnityEvent<float> OnDashUpdated;
 	public UnityEvent<MovementStatus> OnMovementStatusUpdate;
+
 	public float DashCooldown => this.dashCooldown;
 
 	void Awake()
@@ -80,18 +81,25 @@ public class TopDown2DCharacterController : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if (this.dashCooldownTimer > 0f)
-			this.dashCooldownTimer -= Time.deltaTime;
+		this.UpdateDashCooldownTimer(Time.fixedDeltaTime);
 
-		this.OnDashUpdated?.Invoke(this.dashCooldownTimer);
+		this.ClearAnimatorFlags();
 
+		this.UpdateCharacterMovement(Time.fixedDeltaTime);
+	}
+
+	private void ClearAnimatorFlags()
+	{
 		this.animator.SetBool(movingParam, false);
 		this.animator.SetBool(runningParam, false);
 		this.animator.SetBool(crouchingParam, false);
+	}
 
+	private void UpdateCharacterMovement(float deltaTime)
+	{
 		if (this.isDashing)
 		{
-			this.UpdateDashMovement();
+			this.UpdateDashMovement(deltaTime);
 
 			if (this.IsDashComplete())
 			{
@@ -117,7 +125,7 @@ public class TopDown2DCharacterController : MonoBehaviour
 				this.animator.SetBool(crouchingParam, true);
 			}
 
-			Vector2 movement = (this.baseSpeed * speedMultiplier) * Time.fixedDeltaTime * this.moveInput;
+			Vector2 movement = (this.baseSpeed * speedMultiplier) * deltaTime * this.moveInput;
 			this.rb.MovePosition(this.rb.position + movement);
 			this.animator.SetBool(movingParam, true);
 
@@ -129,11 +137,21 @@ public class TopDown2DCharacterController : MonoBehaviour
 		}
 	}
 
-	private void UpdateDashMovement()
+	private void UpdateDashCooldownTimer(float deltaTime)
 	{
-		this.dashTimer -= Time.deltaTime;
+		if (this.dashCooldownTimer > 0f)
+		{
+			this.dashCooldownTimer -= deltaTime;
+			this.OnDashUpdated?.Invoke(this.dashCooldownTimer);
+		}
+
+	}
+
+	private void UpdateDashMovement(float deltaTime)
+	{
+		this.dashTimer -= deltaTime;
 		this.rb.MovePosition(
-			this.rb.position + this.dashSpeed * Time.fixedDeltaTime * this.dashDirection);
+			this.rb.position + this.dashSpeed * deltaTime * this.dashDirection);
 	}
 
 	private Boolean IsDashComplete()

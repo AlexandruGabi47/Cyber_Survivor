@@ -51,4 +51,9 @@ public class TargetingBehaviour2D : MonoBehaviour
 			this.transform.rotation = Quaternion.Euler(0, 0, newZ);
 		}
 	}
+
+	public void SetTrackedObject(Transform newTrackedObject)
+	{
+		this.trackedObject = newTrackedObject;
+	}
 }

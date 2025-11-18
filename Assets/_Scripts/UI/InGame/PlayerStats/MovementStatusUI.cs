@@ -14,7 +14,7 @@ public enum MovementStatus
 
 public class MovementStatusUI : MonoBehaviour
 {
-	[SerializeField] private TopDown2DCharacterController controller;
+	[SerializeField] private TopDown2DCharacterController characterController;
 
 	[SerializeField] private Image statusEffectIcon;
     [SerializeField] private SerializableDictionary<MovementStatus, Sprite> movementSpriteMap;
@@ -23,13 +23,19 @@ public class MovementStatusUI : MonoBehaviour
 
 	void OnEnable()
 	{
-		this.controller.OnMovementStatusUpdate.AddListener(this.UpdateStatus);
+		if (this.characterController != null)
+		{
+			this.characterController.OnMovementStatusUpdate.AddListener(this.UpdateStatus);
+		}
 	}
 
     void OnDisable()
-    {
-        this.controller.OnMovementStatusUpdate.RemoveListener(this.UpdateStatus);
-    }
+	{
+		if (this.characterController != null)
+		{
+			this.characterController.OnMovementStatusUpdate.RemoveListener(this.UpdateStatus);
+		}
+	}
 
 	public void UpdateStatus(MovementStatus newStatus)
     {

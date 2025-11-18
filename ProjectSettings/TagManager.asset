@@ -7,6 +7,7 @@ TagManager:
   - Friendly
   - Enemy
   - Projectile
+  - CameraPosition
   layers:
   - Default
   - TransparentFX
@@ -67,6 +68,9 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 1275537523
+    locked: 0
+  - name: Cursor
+    uniqueID: 3896756207
     locked: 0
   m_RenderingLayers:
   - Default

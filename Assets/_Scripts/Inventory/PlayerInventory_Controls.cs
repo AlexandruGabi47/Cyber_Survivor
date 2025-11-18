@@ -42,7 +42,7 @@ public partial class PlayerInventory : MonoBehaviour
 	{
 		if (this.mainInventory.Items.Count > 0)
 		{
-			//this.mainInventory.Items[this.SelectedInventoryIndex].Use();
+			this.mainInventory.Items[this.currentItemIndex].Use();
 		}
 	}
 

@@ -17,8 +17,40 @@ MonoBehaviour:
   icon: {fileID: 6422974335192418320, guid: 08b69a797726fe541adbef98efbc0094, type: 3}
   maxQuantity: 32
   properties:
-  - tag: 
-    parameters: []
+  - tag: BasicWeapon2DPB
+    parameters:
+    - name: Damage
+      type: 5
+      value: 5
+      description: 
+    - name: FireRate
+      type: 5
+      value: 0.100000001
+      description: 
+    - name: ExitSpeed
+      type: 5
+      value: 20
+      description: 
+    - name: Range
+      type: 5
+      value: 100
+      description: 
+    - name: MagazineCapacity
+      type: 3
+      value: 30
+      description: 
+    - name: ReloadTime
+      type: 5
+      value: 1
+      description: 
+    - name: bulletPoolDefaultSize
+      type: 3
+      value: 50
+      description: 
+    - name: flashDuration
+      type: 5
+      value: 0.100000001
+      description: 
   shape:
     width: 1
     height: 1

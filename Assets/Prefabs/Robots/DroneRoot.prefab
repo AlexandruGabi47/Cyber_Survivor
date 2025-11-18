@@ -284,21 +284,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98704b226d993524abd797bef2f97b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 5
-  FireRate: 0.1
-  ExitSpeed: 20
-  Range: 100
-  Accuracy: 100
-  MaxBulletSpreadAngle: 30
-  BarrelCapacity: 1
-  MagazineCapacity: 30
-  ReloadTime: 1
-  BarrelExitPoint: {fileID: 0}
-  BarrelAngleOffset: 0
+  damage: 5
+  fireRate: 0.3
+  exitSpeed: 20
+  range: 100
+  accuracy: 100
+  maxBulletSpreadAngle: 30
+  barrelCapacity: 1
+  magazineCapacity: 30
+  reloadTime: 1
+  barrelExitPoint: {fileID: 0}
+  barrelAngleOffset: 0
   muzzleFlash: {fileID: 0}
   flashDuration: 0.1
   bulletPrefab: {fileID: 8952163701789425537, guid: 2eb9f13e34806d84eb7ca8faeb243eae, type: 3}
   bulletPoolDefaultSize: 50
+  OwnerTemp: {fileID: 0}
 --- !u!1 &1070864196331750200
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,12 +311,12 @@ GameObject:
   - component: {fileID: 3992967474121899548}
   - component: {fileID: 8881823467130167089}
   m_Layer: 0
-  m_Name: HeadLight
+  m_Name: HeadLight 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3992967474121899548
 Transform:
   m_ObjectHideFlags: 0
@@ -505,7 +506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5158174853850239213
 Transform:
   m_ObjectHideFlags: 0
@@ -632,11 +633,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2
-  m_Acceleration: 6
+  m_Speed: 3
+  m_Acceleration: 7
   avoidancePriority: 50
   m_AngularSpeed: 20
-  m_StoppingDistance: 3
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -672,7 +673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8492069974400305066
 Transform:
   m_ObjectHideFlags: 0
@@ -957,9 +958,12 @@ GameObject:
   - component: {fileID: 1731814886769989663}
   - component: {fileID: 6844316349265086821}
   - component: {fileID: 5186200615819292480}
+  - component: {fileID: 7187339811214727918}
   - component: {fileID: 2460126309574902755}
   - component: {fileID: 3393353245330050625}
   - component: {fileID: 4830395840198136309}
+  - component: {fileID: 1143250998552418810}
+  - component: {fileID: 8754087112972666361}
   m_Layer: 6
   m_Name: FlyingDrone
   m_TagString: Enemy
@@ -1057,17 +1061,17 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 192
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 192
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1129,7 +1133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df568a2e4f1138c4fac483a855fb0a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 7
+  max: 15
   OnEmpty:
     m_PersistentCalls:
       m_Calls:
@@ -1148,6 +1152,23 @@ MonoBehaviour:
   OnFull:
     m_PersistentCalls:
       m_Calls: []
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7187339811214727918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428065401083160615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c85807e86dcf9049a751ff3aca96c85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DroneEnemy
+  meleeDamage: 1
+  damageCooldown: 0.4
 --- !u!114 &2460126309574902755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,9 +1208,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af2067a4e9b7334f854cee8babf7017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: {x: 0.1, y: 0.05, z: 0.05}
-  frequency: {x: 0.1, y: 1, z: 5}
+  amplitude: {x: 0.1, y: 0.05, z: 0}
+  frequency: {x: 0.1, y: 1, z: 0}
   offsetKey: idleFloat
+--- !u!114 &1143250998552418810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428065401083160615}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.ShadowCaster2D
+  m_ShadowGroup: 0
+  m_Priority: 1
+  m_ComponentVersion: 5
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: 0000000077e67dfcab05b0a03d2eb0ee0305feda69c33000270391b5
+  m_ShapePath:
+  - {x: -0.25, y: -0.25, z: 0}
+  - {x: -0.25, y: 0.25, z: 0}
+  - {x: 0.25, y: 0.25, z: 0}
+  - {x: 0.25, y: -0.25, z: 0}
+  m_ShapePathHash: 0
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 4802053927387470265}
+  m_ShadowShape2DProvider:
+    rid: 8740928652095521272
+  m_ShadowCastingSource: 2
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.1499939, y: 0.1499939, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.1
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0
+  m_CastingOption: 1
+  m_PreviousTrimEdge: 0.1
+  m_PreviousEdgeProcessing: 1
+  m_PreviousShadowCastingSource: 2
+  m_PreviousShadowShape2DSource: {fileID: 4802053927387470265}
+  references:
+    version: 2
+    RefIds:
+    - rid: 8740928652095521272
+      type: {class: ShadowShape2DProvider_SpriteRenderer, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data: 
+--- !u!114 &8754087112972666361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428065401083160615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d29978550af5494db7cdcdc731c681f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LivingEntityEffects
+  health: {fileID: 5186200615819292480}
+  spriteRenderers:
+  - {fileID: 4802053927387470265}
+  - {fileID: 4684471684836875000}
+  onHitTint: {r: 1, g: 0, b: 0, a: 1}
+  tintDuration: 0.1
 --- !u!1 &9195068697511064397
 GameObject:
   m_ObjectHideFlags: 0
