@@ -119,6 +119,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clampToCameraBorder: 1
+--- !u!1 &616528205695095854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1513165824473319165}
+  - component: {fileID: 2865225227411649947}
+  m_Layer: 0
+  m_Name: Voice AudioGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1513165824473319165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616528205695095854}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6364221944118518593}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2865225227411649947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616528205695095854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb5fd1099a254345bd3567fa16e374c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CAUnityFramework.AudioGroup
+  mixerGroup: {fileID: 24300002, guid: 88f7df6fa9634004c8f8b012e08b6a4b, type: 2}
+  volumeParameter: Volume
+  defaultCrossfadeDuration: 2
 --- !u!1 &960583856766243182
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,52 +716,6 @@ Transform:
   - {fileID: 2474202265300791007}
   m_Father: {fileID: 9049542292501425675}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6898135377653661355
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4013768382347344122}
-  - component: {fileID: 8606679021380424731}
-  m_Layer: 0
-  m_Name: Announcement AudioGroup
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4013768382347344122
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6898135377653661355}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6364221944118518593}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8606679021380424731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6898135377653661355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb5fd1099a254345bd3567fa16e374c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CAUnityFramework.AudioGroup
-  volume: 1
-  mixerGroup: {fileID: 0}
 --- !u!1 &7382790754536261388
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +727,7 @@ GameObject:
   - component: {fileID: 3086905238171016832}
   - component: {fileID: 4702985020693225654}
   m_Layer: 0
-  m_Name: Music AudioGroup
+  m_Name: Misc AudioGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -759,8 +760,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb5fd1099a254345bd3567fa16e374c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CAUnityFramework.AudioGroup
-  volume: 1
-  mixerGroup: {fileID: 0}
+  mixerGroup: {fileID: 24300002, guid: 88f7df6fa9634004c8f8b012e08b6a4b, type: 2}
+  volumeParameter: Volume
+  defaultCrossfadeDuration: 2
 --- !u!1 &7724707746468127484
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,7 +774,7 @@ GameObject:
   - component: {fileID: 5046457399664538787}
   - component: {fileID: 9153210893641926353}
   m_Layer: 0
-  m_Name: UI AudioGroup
+  m_Name: SFX AudioGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -805,8 +807,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb5fd1099a254345bd3567fa16e374c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CAUnityFramework.AudioGroup
-  volume: 1
-  mixerGroup: {fileID: 0}
+  mixerGroup: {fileID: 24300002, guid: 88f7df6fa9634004c8f8b012e08b6a4b, type: 2}
+  volumeParameter: Volume
+  defaultCrossfadeDuration: 2
+--- !u!1 &8673921252102001751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2405916030978095958}
+  - component: {fileID: 1598382680090580202}
+  m_Layer: 0
+  m_Name: Music AudioGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2405916030978095958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8673921252102001751}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6364221944118518593}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598382680090580202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8673921252102001751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb5fd1099a254345bd3567fa16e374c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CAUnityFramework.AudioGroup
+  mixerGroup: {fileID: 24300002, guid: 88f7df6fa9634004c8f8b012e08b6a4b, type: 2}
+  volumeParameter: Volume
+  defaultCrossfadeDuration: 2
 --- !u!1 &8952918617885526621
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,8 +888,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3086905238171016832}
+  - {fileID: 2405916030978095958}
   - {fileID: 5046457399664538787}
-  - {fileID: 4013768382347344122}
+  - {fileID: 1513165824473319165}
   m_Father: {fileID: 9049542292501425675}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1985174247364734226
@@ -857,8 +908,14 @@ MonoBehaviour:
   masterVolume: 1
   audioGroupDictionary:
     items:
-    - Key: 1
+    - Key: 0
       Value: {fileID: 4702985020693225654}
+    - Key: 1
+      Value: {fileID: 1598382680090580202}
+    - Key: 8
+      Value: {fileID: 9153210893641926353}
+    - Key: 7
+      Value: {fileID: 2865225227411649947}
 --- !u!1 &9164157759952529677
 GameObject:
   m_ObjectHideFlags: 0
