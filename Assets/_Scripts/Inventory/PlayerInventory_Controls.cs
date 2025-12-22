@@ -5,10 +5,15 @@ using UnityEngine.InputSystem;
 
 public partial class PlayerInventory : MonoBehaviour
 {
+	#region Unity Event Functions
 	public void OnEnable()
 	{
 		this.useItem.action.performed += this.GetUseItemAction();
+		this.useItem.action.canceled += this.GetReleaseItemAction();
 		this.useItem.action.Enable();
+
+		this.reloadItem.action.performed += this.GetReloadItemAction();
+		this.reloadItem.action.Enable();
 
 		this.dropItem.action.performed += this.GetDropItemAction();
 		this.dropItem.action.Enable();
@@ -20,7 +25,11 @@ public partial class PlayerInventory : MonoBehaviour
 	public void OnDisable()
 	{
 		this.useItem.action.performed -= this.GetUseItemAction();
+		this.useItem.action.canceled -= this.GetReleaseItemAction();
 		this.useItem.action.Disable();
+
+		this.reloadItem.action.performed -= this.GetReloadItemAction();
+		this.reloadItem.action.Disable();
 
 		this.dropItem.action.performed -= this.GetDropItemAction();
 		this.dropItem.action.Disable();
@@ -28,21 +37,30 @@ public partial class PlayerInventory : MonoBehaviour
 		this.hotbarScroll.action.performed -= this.GetHotbarScrollAction();
 		this.hotbarScroll.action.Disable();
 	}
+	#endregion
 
+	#region Input Action Callbacks
 	private Action<InputAction.CallbackContext> GetUseItemAction() =>
-		ctx => this.UseItem();
+		ctx => this.UseItem(ItemActionType.Primary, ItemActionState.Pressed);
+
+	private Action<InputAction.CallbackContext> GetReleaseItemAction() =>
+		ctx => this.UseItem(ItemActionType.Primary, ItemActionState.Released);
+
+	private Action<InputAction.CallbackContext> GetReloadItemAction() =>
+		ctx => this.UseItem(ItemActionType.Reload, ItemActionState.Pressed);
 
 	private Action<InputAction.CallbackContext> GetDropItemAction() =>
 		ctx => this.DropItem();
 
 	private Action<InputAction.CallbackContext> GetHotbarScrollAction() =>
 		ctx => this.ScrollInventory(ctx.ReadValue<Vector2>());
-
-	private void UseItem()
+	#endregion
+	
+	private void UseItem(ItemActionType actionType, ItemActionState actionState)
 	{
 		if (this.mainInventory.Items.Count > 0)
 		{
-			this.mainInventory.Items[this.currentItemIndex].Use();
+			this.mainInventory.Items[this.currentItemIndex].Use(actionType, actionState);
 		}
 	}
 
@@ -51,7 +69,7 @@ public partial class PlayerInventory : MonoBehaviour
 		if (this.mainInventory.Items.Count > 0)
 		{
 			ItemInstance itemToDrop = this.mainInventory.Items[this.currentItemIndex];
-			if (this.mainInventory.TakeItem(itemToDrop))
+			if (this.mainInventory.RemoveItem(itemToDrop))
 			{
 				if (this.currentItemIndex >= this.mainInventory.Items.Count)
 					this.currentItemIndex = Math.Max(0, this.mainInventory.Items.Count - 1);

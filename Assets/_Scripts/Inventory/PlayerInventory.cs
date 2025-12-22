@@ -10,6 +10,7 @@ public partial class PlayerInventory : MonoBehaviour
 
 	[Header("Input Actions")]
 	[SerializeField] private InputActionReference useItem;
+	[SerializeField] private InputActionReference reloadItem;
 	[SerializeField] private InputActionReference dropItem;
 	[SerializeField] private InputActionReference hotbarScroll;
 

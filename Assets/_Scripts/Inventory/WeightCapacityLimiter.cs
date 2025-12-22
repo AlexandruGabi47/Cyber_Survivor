@@ -13,6 +13,7 @@ public class WeightCapacityLimiter : BasicCapacityLimiter
         {
             currentWeight += 1f/*item.ItemData.Weight*/ * item.Quantity;
         }
+
         return currentWeight < this.maxWeight;
-	}
+    }
 }

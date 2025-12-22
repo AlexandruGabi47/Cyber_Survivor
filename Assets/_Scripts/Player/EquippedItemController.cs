@@ -2,7 +2,7 @@ using UnityEngine;
 using CAUnityFramework;
 using UnityEngine.InputSystem;
 
-public class HandsController : MonoBehaviour
+public class EquippedItemController : MonoBehaviour
 {
 	[SerializeField] private InputActionReference useAction;
 

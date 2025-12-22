@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using CAUnityFramework;
 
-public class InGameUI : MonoBehaviour
+public class InGameUI : StaticInstance<InGameUI>
 {
 	[Header("Menus")]
 	[SerializeField] private GameObject pauseMenu;

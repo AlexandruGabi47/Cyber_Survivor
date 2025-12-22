@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 8059006811536793273}
   m_Layer: 0
   m_Name: CameraPosition
-  m_TagString: Untagged
+  m_TagString: CameraPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -569,6 +569,7 @@ GameObject:
   - component: {fileID: 9019259661407191740}
   - component: {fileID: 1629937076762020214}
   - component: {fileID: 7908139178099059900}
+  - component: {fileID: 4465432631259802529}
   m_Layer: 6
   m_Name: PlayerCharacter
   m_TagString: Player
@@ -673,17 +674,17 @@ BoxCollider2D:
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4294967295
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -949,7 +950,25 @@ MonoBehaviour:
   spriteRenderers:
   - {fileID: 5651998178450966377}
   onHitTint: {r: 1, g: 0, b: 0, a: 1}
-  tintDuration: 0.1
+  tintDuration: 0.05
+--- !u!114 &4465432631259802529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289870858108172664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9143725286324d2459f242cfdeb2325f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMB
+  hurtSounds:
+  - {fileID: 8300000, guid: 0f89a6b5fcddf294b9f8a8390d885892, type: 3}
+  - {fileID: 8300000, guid: 637d4dd36fa2a7e4d822fe438e023f99, type: 3}
+  - {fileID: 8300000, guid: a6b46a688a3bd1f41b3dcdf6e6f6067d, type: 3}
+  - {fileID: 8300000, guid: c05441f0cae386947b16666a641079d8, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 3c6c3638467268b46b86d15e6816480c, type: 3}
 --- !u!1 &8540086729889640988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,9 +1172,10 @@ MonoBehaviour:
   barrelExitPoint: {fileID: 7828419379800924364}
   barrelAngleOffset: 90
   muzzleFlash: {fileID: 6391466149385952864}
-  flashDuration: 0.05
+  flashDuration: 0.02
   bulletPrefab: {fileID: 8952163701789425537, guid: fa0fa224be0d5bc45a1e9ef9599f9d45, type: 3}
   bulletPoolDefaultSize: 50
+  gunShotClip: {fileID: 8300000, guid: 9e01651883b7b8a458de1e984c882945, type: 3}
   OwnerTemp: {fileID: 7289870858108172664}
 --- !u!1 &9105121170088980212
 GameObject:

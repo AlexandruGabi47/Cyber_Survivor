@@ -299,6 +299,7 @@ MonoBehaviour:
   flashDuration: 0.1
   bulletPrefab: {fileID: 8952163701789425537, guid: 2eb9f13e34806d84eb7ca8faeb243eae, type: 3}
   bulletPoolDefaultSize: 50
+  gunShotClip: {fileID: 0}
   OwnerTemp: {fileID: 0}
 --- !u!1 &1070864196331750200
 GameObject:
@@ -1078,7 +1079,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

@@ -16,10 +16,6 @@ MonoBehaviour:
   id: Pistol
   icon: {fileID: -4136130880062492013, guid: 6a316700bccdaf54b89beff0b849b47b, type: 3}
   maxQuantity: 1
-  shape:
-    width: 1
-    height: 1
-    cells: 01
   properties:
   - tag: Weapon2DPB
     parameters:
@@ -29,7 +25,7 @@ MonoBehaviour:
       description: 
     - name: FireRate
       type: 5
-      value: 0.1
+      value: 0.100000001
       description: 
     - name: ExitSpeed
       type: 5
@@ -53,5 +49,12 @@ MonoBehaviour:
       description: 
     - name: flashDuration
       type: 5
-      value: 0.1
+      value: 0.100000001
       description: 
+  shape:
+    width: 2
+    height: 1
+    cells: 0101
+  usePrefab: {fileID: 0}
+  consumeOnUse: 0
+  consumeActionType: 1
