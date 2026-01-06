@@ -1,6 +1,6 @@
 using UnityEngine;
 using CAUnityFramework;
-using CAUnityFramework.Editor;
+using CAUnityFramework.Editor.Utils;
 
 [DisallowMultipleComponent]
 public class TargetingBehaviour2D : MonoBehaviour

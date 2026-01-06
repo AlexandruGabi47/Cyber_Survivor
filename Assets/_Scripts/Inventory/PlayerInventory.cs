@@ -1,6 +1,8 @@
 using UnityEngine;
-using CAUnityFramework;
 using UnityEngine.InputSystem;
+using CAUnityFramework;
+using CAUnityFramework.ItemSystem.Inventory;
+using CAUnityFramework.ItemSystem;
 
 public partial class PlayerInventory : MonoBehaviour
 {
@@ -48,8 +50,8 @@ public partial class PlayerInventory : MonoBehaviour
 
 	private void PickupItem(ItemPickup2D itemPickup)
 	{
-		ItemInstance itemIns = itemPickup.ItemStack;
-		this.mainInventory.TryAddItem(itemIns, out ItemInstance remainingItems);
+		ItemStack itemIns = itemPickup.ItemStack;
+		this.mainInventory.TryAddItem(itemIns, out ItemStack remainingItems);
 		itemPickup.SetItemInstance(remainingItems);
 		itemPickup.PickupDone();
 	}

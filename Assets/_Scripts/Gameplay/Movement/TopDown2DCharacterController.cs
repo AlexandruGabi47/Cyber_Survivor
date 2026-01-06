@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using CAUnityFramework;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]

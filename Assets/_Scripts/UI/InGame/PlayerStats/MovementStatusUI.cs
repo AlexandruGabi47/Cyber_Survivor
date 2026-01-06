@@ -1,5 +1,4 @@
-using CAUnityFramework;
-using System.Collections.Generic;
+using CAUnityFramework.Core.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 

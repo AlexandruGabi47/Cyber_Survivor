@@ -1,5 +1,5 @@
-using CAUnityFramework;
-using System;
+using CAUnityFramework.ItemSystem.Inventory;
+using CAUnityFramework.ItemSystem.Inventory.UI;
 using System.Collections.Generic;
 using UnityEngine;
 

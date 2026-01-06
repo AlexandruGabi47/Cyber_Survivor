@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using CAUnityFramework;
 using UnityEngine.InputSystem;
+using CAUnityFramework.ItemSystem;
 
 public partial class PlayerInventory : MonoBehaviour
 {
@@ -68,7 +69,7 @@ public partial class PlayerInventory : MonoBehaviour
 	{
 		if (this.mainInventory.Items.Count > 0)
 		{
-			ItemInstance itemToDrop = this.mainInventory.Items[this.currentItemIndex];
+			ItemStack itemToDrop = this.mainInventory.Items[this.currentItemIndex];
 			if (this.mainInventory.RemoveItem(itemToDrop))
 			{
 				if (this.currentItemIndex >= this.mainInventory.Items.Count)

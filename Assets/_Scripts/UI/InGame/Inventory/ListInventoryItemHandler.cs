@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using CAUnityFramework;
+using CAUnityFramework.ItemSystem;
 
 public class ListInventoryItemHandler : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class ListInventoryItemHandler : MonoBehaviour
 			this.selectedObject.SetActive(selected);
 	}
 
-	public void UpdateDisplay(ItemInstance item)
+	public void UpdateDisplay(ItemStack item)
 	{
 		if (item == null)
 		{

@@ -1,9 +1,7 @@
 using CAUnityFramework;
+using CAUnityFramework.System.Audio;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.Rendering.Universal;
 
 public class MusicLightShow : MonoBehaviour
 {
